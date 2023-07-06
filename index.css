@@ -76,13 +76,15 @@ input, button, textarea, select {
 }
 
 /* Remove animations for people who have turned them off */
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ------------------------------ */
@@ -175,4 +177,77 @@ input, button, textarea, select {
     margin-right: 0.5em;
     font-weight: 700;
     color: hsl(var(--clr-white) / .25);
+}
+
+/* ------------------------------ */
+/* Components */
+/* ------------------------------ */
+
+.large-button {
+    position: relative;
+    display: grid;
+    z-index: 1;
+    place-items: center;
+    padding: 0 2em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-decoration: none;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: hsl( var(--clr-white) / .15);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.primary-navigation {
+    --gap: 8rem;
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation a {
+    font-size: var(--fs-300);
+    text-decoration: none;
+}
+
+.primary-navigation a span {
+    font-weight: 700;
+    margin-right: 0.5em;
+}
+
+.underline-indicators > * {
+    padding: var(--underline-gap, 1em) 0;
+    border: 0;
+    border-bottom: 3px solid hsl(var(--clr-white) / 0);
+    cursor: pointer;
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl(var(--clr-white) / .5);
+}
+
+.underline-indicators > *.active,
+.underline-indicators > [aria-selected="true"] {
+    color: hsl(var(--clr-white));
+    border-color: hsl(var(--clr-white));
+}
+
+.tab-list {
+    --gap: 2rem;
 }
