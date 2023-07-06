@@ -251,3 +251,21 @@ input, button, textarea, select {
 .tab-list {
     --gap: 2rem;
 }
+
+.dot-indicators > * {
+    background-color: hsl(var(--clr-white) / .174);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    padding: .4175em;
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+    background-color: hsl(var(--clr-white) / .5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+    background-color: hsl(var(--clr-white));
+}
