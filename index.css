@@ -269,3 +269,25 @@ input, button, textarea, select {
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl(var(--clr-white));
 }
+
+.number-indicators > * {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: var(--fs-600);
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark));
+    border: 1px solid hsl(var(--clr-white) / .25);
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus {
+    border-color: hsl(var(--clr-white));
+}
+
+.number-indicators > [aria-selected="true"] {
+    color: hsl(var(--clr-dark));
+    background-color: hsl(var(--clr-white));
+}

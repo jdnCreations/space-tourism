@@ -90,7 +90,7 @@
                 </div>
             </section>
 
-            <section class="flow" id="interactive-elements">
+            <section class="flow" id="interactive-elements" style="margin: 3rem 0">
                 <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
                 
                 <!-- navigation -->
@@ -105,12 +105,12 @@
                 </div>
                 
                 <div class="flex">
-                    <div style="margin-top: 5rem">
+                    <div style="flex-basis: 100%; margin-top: 5rem" class="flow">
                         <!-- explore button -->
                         <a href="#" class="large-button uppercase ff-serif bg-white text-dark fs-600">Explore</a>
                     </div>
                     
-                    <div style="margin-bottom: 50vh; --flow-space: 4rem;" class="flow">
+                    <div style="flex-basis: 100%; margin-bottom: 50vh; --flow-space: 4rem;" class="flow">
                         <!-- Tabs -->
                         <div class="underline-indicators ff-sans-cond tab-list flex" style="--underline-gap: .5rem">
                             <button aria-selected="true" class="uppercase letter-spacing-2 fs-300 text-light bg-dark" href="#">Moon</button>
@@ -126,6 +126,11 @@
                         </div>
                         
                         <!-- Numbers -->
+                        <div class="number-indicators flex ff-serif" style="flex-direction: column;">
+                            <button aria-selected="true">1</button>
+                            <button aria-selected="false">2</button>
+                            <button aria-selected="false">3</button>
+                        </div>
                     </div>
                 </div>
                 
