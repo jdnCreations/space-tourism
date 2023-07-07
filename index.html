@@ -13,35 +13,42 @@
 
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
-  <header class="primary-header">
+<body class="home">
+  <header class="primary-header flex">
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+      <!-- <img src="./assets/shared/icon-hamburger.svg" alt=""> -->
     </div>
-    <nav>
+    <!-- <nav>
       <ul class="primary-navigation underline-indicators flex ff-sans-cond">
-        <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>00</span>Home</a></li>
-        <li><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Destination</a></li>
-        <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Crew</a></li>
-        <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Technology</a></li>
+        <li class="active"><a class="uppercase text-white letter-spacing-2" 
+          href="#"><span>00</span>Home</a></li>
+        <li><a class="uppercase text-white letter-spacing-2" 
+          href="#"><span>01</span>Destination</a></li>
+        <li><a class="uppercase text-white letter-spacing-2" 
+          href="#"><span>02</span>Crew</a></li>
+        <li><a class="uppercase text-white letter-spacing-2" 
+          href="#"><span>03</span>Technology</a></li>
       </ul>
-    </nav>
+    </nav> -->
   </header>
 
-  <div class="container flow">
-
-    <nav class="flex" style="justify-content: space-between; align-items: center; margin: 1.5em 0;">
-    </nav>
-    <div class="flow flex" style="flex-direction: column; text-align: center;">
-      <p class="text-light fs-400 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to</p>
-      <p class="uppercase ff-serif letter-spacing-1" style="font-size: 5rem;">space</p>
-      <p class="text-light fs-200 ff-sans-normal" style="max-width: 28rem; line-height: 25px;">
+  <div class="grid-container grid-container--home">
+    <div>
+      <h1 class="text-light fs-500 ff-sans-cond uppercase letter-spacing-1">
+        So, you want to travel to
+        <span class="fs-900 ff-serif text-white d-block">space</span>
+      </h1>
+      <p class="text-light">
         Let’s face it; if you want to go to space, you might as well genuinely go to
         outer space and not hover kind of on the edge of it. Well sit back, and relax
         because we’ll give you a truly out of this world experience!
       </p>
-      <button class="large-button fs-600 uppercase ff-serif">Explore</button>
+    </div>
+    <div>
+      <a href="#" class="large-button uppercase ff-serif bg-white text-dark">
+        Explore
+      </a>
     </div>
   </div>
   <script src="./index.js"></script>
