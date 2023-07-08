@@ -189,6 +189,21 @@ input, button, textarea, select {
     border: 0;
 }
 
+.skip-to-content {
+    transform: translateY(-100%);
+    position: absolute;
+    z-index: 9999;
+    background-color: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+    padding: .5em 1em;
+    margin-inline: auto;
+    transition: transform ease-in-out 250ms;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
+}
+
 /* colors */
 
 .bg-dark { background-color: hsl(var(--clr-dark));}
