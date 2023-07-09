@@ -101,11 +101,6 @@ input, button, textarea, select {
     font: inherit;
 }
 
-/* All paragraphs have light */
-p {
-    color: hsl(var(--clr-light));
-}
-
 /* Remove animations for people who have turned them off */
 @media (prefers-reduced-motion: reduce) {  
   *,
@@ -634,6 +629,78 @@ body {
         justify-content: start;
     }
 
+}
 
+/* ------------------- */
+/* Crew */
+/* ------------------- */
 
+.crew {
+    background-image: url('./assets/crew/background-crew-mobile.jpg');
+}
+
+@media (min-width: 35em) {
+    .crew {
+        background-image: url('./assets/crew/background-crew-tablet.jpg');
+        background-position: center center;
+    }
+}
+
+@media (mind-width: 49em) {
+    .crew {
+        background-image: url('./assets/crew/background-crew-desktop.jpg');
+    }
+}
+
+/* crew layout */
+
+.grid-container--crew {
+    grid-template-areas: 
+        'title'
+        'image'
+        'dots'
+        'content'
+    ;
+}
+
+.grid-container--crew > img {
+    grid-area: image;
+    max-width: 60%;
+}
+
+.grid-container--crew > .dots {
+    grid-area: dots;
+}
+
+.grid-container--crew > .crew-info {
+    grid-area: content;
+}
+
+@media (min-width: 35em) {
+    .grid-container--crew {
+        grid-template-areas: 
+            'title'
+            'content'
+            'dots'
+            'image'
+        ;
+    }
+}
+
+@media (min-width: 49em) {
+    .grid-container--crew {
+        justify-items: start;
+        grid-template-areas: 
+            '. title title .'
+            '. content image .'
+            '. content image .'
+            '. dots image .'
+        ;
+    }
+
+    .grid-container--crew > img {
+        position: relative;
+        bottom: 0;
+        max-width: 90%;
+    }
 }
