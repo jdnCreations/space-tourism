@@ -71,7 +71,7 @@ picture {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5 h6, p {
+h1, h2, h3, h4, h5, h6, p {
     font-weight: 400;
 }
 
@@ -83,8 +83,10 @@ body {
     color: hsl(var(--clr-white));
     line-height: 1.5;
     min-height: 100vh;
+
     display: grid;
     grid-template-rows: min-content 1fr;
+
     overflow-x: hidden;
 }
 
@@ -97,6 +99,11 @@ img, picture {
 /* Make form elements easier to work with */
 input, button, textarea, select {  
     font: inherit;
+}
+
+/* All paragraphs have light */
+p {
+    color: hsl(var(--clr-light));
 }
 
 /* Remove animations for people who have turned them off */
@@ -529,7 +536,7 @@ body {
     padding-bottom: 3rem;
 }
 
-.grid-container * {
+.grid-container p:not([class]) {
     max-width: 50ch;
 }
 
@@ -570,7 +577,7 @@ body {
     justify-content: center;
 }
 
-.destination-meta > p {
+.destination-meta p {
     font-size: 1.75rem;
 }
 
@@ -623,7 +630,7 @@ body {
     }
 
     .destination-meta {
-        --gap: 6rem;
+        --gap: min(6vw, 6rem);
         justify-content: start;
     }
 
