@@ -15,7 +15,6 @@ const planetPicture = document.querySelector('#main picture');
 const planetSource = planetPicture.querySelector('source');
 const planetImg = planetPicture.querySelector('img');
 
-console.log(planetSource);
 
 const moonBtn = document.getElementById('moon');
 const marsBtn = document.getElementById('mars');
@@ -24,9 +23,18 @@ const titanBtn = document.getElementById('titan');
 
 const tabList = [moonBtn, marsBtn, europaBtn, titanBtn];
 
+async function fetchData() {
+    await fetch('./data.json').then(response => response.json()).then((json => data = json));
+}
+
+// load data once window has loaded, set planets
+window.onload = fetchData().then(() => {
+    planets = [moon, mars, europa, titan] = data.destinations;
+    
+});
+
 for (let i = 0; i < tabList.length; i++) {
     tabList[i].addEventListener('click', () => {
-
         // set active
         tabList[i].ariaSelected = true;
 
@@ -46,13 +54,3 @@ for (let i = 0; i < tabList.length; i++) {
         planetImg.alt = planets[i].name;
     });
 }
-
-
-async function fetchData() {
-    await fetch('./data.json').then(response => response.json()).then((json => data = json));
-}
-
-window.onload = fetchData().then(() => {
-    planets = [moon, mars, europa, titan] = data.destinations;
-    
-});
